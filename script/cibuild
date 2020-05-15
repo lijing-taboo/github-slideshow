@@ -1,5 +1,5 @@
 #!/bin/sh
-
+#includ bnew new new-lijing
 set -e
 
 bundle exec jekyll build --baseurl "."
