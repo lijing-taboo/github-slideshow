@@ -1,0 +1,120 @@
+{
+ "sku": {
+  "name": "A1",
+  "tier": "Standard"
+ },
+ "identity": {
+  "principalId": "060153a6-5790-423b-b143-5ac97e2aeb25",
+  "tenantId": "a7cebf09-8aa7-422d-8bec-686969d16b76",
+  "type": "SystemAssigned"
+ },
+ "properties": {
+  "displayName": "[预览]: NIST SP 800-171 R2",
+  "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/03055927-78bd-4236-86c0-f36125a10dc9",
+  "scope": "/subscriptions/99b79206-065f-441f-85ea-9ed2ccbe979d",
+  "notScopes": [],
+  "parameters": {
+   "IncludeArcMachines": {
+    "value": "false"
+   },
+   "membersToExcludeInLocalAdministratorsGroup": {
+    "value": "test"
+   },
+   "membersToIncludeInLocalAdministratorsGroup": {
+    "value": "test"
+   },
+   "listOfLocationsForNetworkWatcher": {
+    "value": []
+   },
+   "NetworkWatcherResourceGroupName": {
+    "value": "NetworkWatcherRG"
+   },
+   "logAnalyticsWorkspaceIDForVMAgents": {
+    "value": "test"
+   },
+   "pHPLatestVersionForAppServices": {
+    "value": "7.3"
+   },
+   "windowsImagesToAddToLogAgentAuditScope": {
+    "value": []
+   },
+   "linuxImagesToAddToLogAgentAuditScope": {
+    "value": []
+   },
+   "javaLatestVersionForAppServices": {
+    "value": "11"
+   },
+   "WindowsPythonLatestVersionForAppServices": {
+    "value": "3.6"
+   },
+   "linuxPythonLatestVersionForAppServices": {
+    "value": "3.8"
+   },
+   "listOfResourceTypesForDiagnosticLogs": {
+    "value": [
+     "Microsoft.AnalysisServices/servers",
+     "Microsoft.ApiManagement/service",
+     "Microsoft.Network/applicationGateways",
+     "Microsoft.Automation/automationAccounts",
+     "Microsoft.ContainerInstance/containerGroups",
+     "Microsoft.ContainerRegistry/registries",
+     "Microsoft.ContainerService/managedClusters",
+     "Microsoft.Batch/batchAccounts",
+     "Microsoft.Cdn/profiles/endpoints",
+     "Microsoft.CognitiveServices/accounts",
+     "Microsoft.DocumentDB/databaseAccounts",
+     "Microsoft.DataFactory/factories",
+     "Microsoft.DataLakeAnalytics/accounts",
+     "Microsoft.DataLakeStore/accounts",
+     "Microsoft.EventGrid/eventSubscriptions",
+     "Microsoft.EventGrid/topics",
+     "Microsoft.EventHub/namespaces",
+     "Microsoft.Network/expressRouteCircuits",
+     "Microsoft.Network/azureFirewalls",
+     "Microsoft.HDInsight/clusters",
+     "Microsoft.Devices/IotHubs",
+     "Microsoft.KeyVault/vaults",
+     "Microsoft.Network/loadBalancers",
+     "Microsoft.Logic/integrationAccounts",
+     "Microsoft.Logic/workflows",
+     "Microsoft.DBforMySQL/servers",
+     "Microsoft.Network/networkInterfaces",
+     "Microsoft.Network/networkSecurityGroups",
+     "Microsoft.DBforPostgreSQL/servers",
+     "Microsoft.PowerBIDedicated/capacities",
+     "Microsoft.Network/publicIPAddresses",
+     "Microsoft.RecoveryServices/vaults",
+     "Microsoft.Cache/redis",
+     "Microsoft.Relay/namespaces",
+     "Microsoft.Search/searchServices",
+     "Microsoft.ServiceBus/namespaces",
+     "Microsoft.SignalRService/SignalR",
+     "Microsoft.Sql/servers/databases",
+     "Microsoft.Sql/servers/elasticPools",
+     "Microsoft.StreamAnalytics/streamingjobs",
+     "Microsoft.TimeSeriesInsights/environments",
+     "Microsoft.Network/trafficManagerProfiles",
+     "Microsoft.Compute/virtualMachines",
+     "Microsoft.Compute/virtualMachineScaleSets",
+     "Microsoft.Network/virtualNetworks",
+     "Microsoft.Network/virtualNetworkGateways"
+    ]
+   },
+   "minimumTLSVersionForWindowsServers": {
+    "value": "1.2"
+   }
+  },
+  "description": "",
+  "metadata": {
+   "createdBy": "a025f3da-0a9d-4318-8f17-687b52e51c4a",
+   "createdOn": "2021-03-09T11:42:52.9346113Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/99b79206-065f-441f-85ea-9ed2ccbe979d/providers/Microsoft.Authorization/policyAssignments/6145305cbf894f77c0d9407a1b8f2fd9ef8be259d61180a715788bdf2cfe319f",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "6145305cbf894f77c0d9407a1b8f2fd9ef8be259d61180a715788bdf2cfe319f",
+ "location": "westus2"
+}

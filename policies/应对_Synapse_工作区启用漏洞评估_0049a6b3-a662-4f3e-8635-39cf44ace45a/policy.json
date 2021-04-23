@@ -1,0 +1,46 @@
+{
+ "properties": {
+  "displayName": "应对 Synapse 工作区启用漏洞评估",
+  "policyType": "BuiltIn",
+  "mode": "Indexed",
+  "description": "通过对 Synapse 工作区配置定期 SQL 漏洞评估扫描，发现、跟踪和修正潜在漏洞。",
+  "metadata": {
+   "version": "1.0.0",
+   "category": "Synapse"
+  },
+  "parameters": {
+   "effect": {
+    "type": "String",
+    "metadata": {
+     "displayName": "效果",
+     "description": "启用或禁用策略执行"
+    },
+    "allowedValues": [
+     "AuditIfNotExists",
+     "Disabled"
+    ],
+    "defaultValue": "AuditIfNotExists"
+   }
+  },
+  "policyRule": {
+   "if": {
+    "field": "type",
+    "equals": "Microsoft.Synapse/workspaces"
+   },
+   "then": {
+    "effect": "[parameters('effect')]",
+    "details": {
+     "type": "Microsoft.Synapse/workspaces/vulnerabilityAssessments",
+     "name": "default",
+     "existenceCondition": {
+      "field": "Microsoft.Synapse/workspaces/vulnerabilityAssessments/recurringScans.isEnabled",
+      "equals": "True"
+     }
+    }
+   }
+  }
+ },
+ "id": "/providers/Microsoft.Authorization/policyDefinitions/0049a6b3-a662-4f3e-8635-39cf44ace45a",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "0049a6b3-a662-4f3e-8635-39cf44ace45a"
+}

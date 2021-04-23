@@ -1,0 +1,51 @@
+{
+ "properties": {
+  "displayName": "应将 Azure 数据工厂上的 SQL Server Integration Services 集成运行时联接到虚拟网络",
+  "policyType": "BuiltIn",
+  "mode": "Indexed",
+  "description": "Azure 虚拟网络部署为 Azure 数据工厂上的 SQL Server Integration Services 集成运行时以及子网、访问控制策略和其他进一步限制访问的功能提供了增强的安全性和隔离性。",
+  "metadata": {
+   "version": "1.0.0",
+   "category": "Data Factory"
+  },
+  "parameters": {
+   "effect": {
+    "type": "String",
+    "metadata": {
+     "displayName": "效果",
+     "description": "效果确定在策略规则被评估为匹配时会发生什么。"
+    },
+    "allowedValues": [
+     "Audit",
+     "Deny",
+     "Disabled"
+    ],
+    "defaultValue": "Audit"
+   }
+  },
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "field": "type",
+      "equals": "Microsoft.DataFactory/factories/integrationRuntimes"
+     },
+     {
+      "field": "Microsoft.DataFactory/factories/integrationruntimes/type",
+      "equals": "Managed"
+     },
+     {
+      "field": "Microsoft.DataFactory/factories/integrationRuntimes/Managed.typeProperties.computeProperties.vnetProperties.vnetId",
+      "exists": "false"
+     }
+    ]
+   },
+   "then": {
+    "effect": "[parameters('effect')]"
+   }
+  }
+ },
+ "id": "/providers/Microsoft.Authorization/policyDefinitions/0088bc63-6dee-4a9c-9d29-91cfdc848952",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "0088bc63-6dee-4a9c-9d29-91cfdc848952"
+}
